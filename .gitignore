@@ -1,5 +1,6 @@
 
 .idea/.*
+.idea/*
 .idea/copyright/*
 .idea/libraries/*
 workspace.xml

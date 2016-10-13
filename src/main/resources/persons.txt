@@ -1,0 +1,24 @@
+(name)John Doe
+(age)20
+(city)Safford, AZ
+(flags)NYY        (is female)(is employee)(is citizen)
+
+(name)Jane Doe
+(age)21
+(city)Safford, AZ
+(flags)YNY
+
+(name)Ronald McDonald
+(age)99
+(city)New York, NY
+(flags)NNY
+
+(name)Sergio Valente
+(age)66
+(city)Paris
+(flags)NNN
+
+(name)Last Person
+(age)55
+(city)Moscow
+(flags)YYN

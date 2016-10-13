@@ -1,0 +1,62 @@
+
+
+1. Write a Java class that will read the persons.txt file as input
+
+2. Each (name), (age), (city) and (flags) grouping represents a person record
+
+3. A blank line is inserted between each person record as a delimiter
+
+4. The (city) tag may have a state following the city delimited by ','
+
+5. The (flags) represents 3 boolean options:
+    (1) Is this person female?
+    (2) Is this person an employee of XYZ company?
+    (3) Is this person a citizen of the United States?
+
+6. Write the output as:
+
+[
+    {
+        "name": "John Doe",
+        "age": 20,
+        "city": "Safford",
+        "state": "AZ",
+        "isfemale": "N",
+        "isemployee": "Y",
+        "iscitizen": "Y"
+    },
+    {
+        "name": "Jane Doe",
+        "age": 21,
+        "city": "Safford",
+        "state": "AZ",
+        "isfemale": "Y",
+        "isemployee": "N",
+        "iscitizen": "Y"
+    },
+    {
+        "name": "Ronald McDonald",
+        "age": 99,
+        "city": "New York",
+        "state": "NY",
+        "isfemale": "N",
+        "isemployee": "N",
+        "iscitizen": "Y"
+    },
+    {
+        "name": "Sergio Valente",
+        "age": 66,
+        "city": "Paris",
+        "isfemale": "N",
+        "isemployee": "N",
+        "iscitizen": "N"
+    },
+    {
+        "name": "Last Person",
+        "age": 55,
+        "city": "Moscow",
+        "isfemale": "Y",
+        "isemployee": "Y",
+        "iscitizen": "N"
+    }
+]
