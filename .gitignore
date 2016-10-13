@@ -1,3 +1,13 @@
+
+.idea/.*
+.idea/copyright/*
+.idea/libraries/*
+workspace.xml
+*.iml
+src/main/resources/META-INF/keys/*.prv
+
+target/*
+
 *.class
 
 # Mobile Tools for Java (J2ME)
