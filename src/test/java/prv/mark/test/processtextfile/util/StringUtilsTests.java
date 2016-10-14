@@ -13,7 +13,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Created by mlglenn on 10/13/2016.
+ * JUnit tests for the {@link StringUtils} class.
+ *
+ * @author mlglenn on 10/13/2016.
  */
 public class StringUtilsTests {
 
@@ -110,4 +112,19 @@ public class StringUtilsTests {
         assertEquals(StringUtils.safeString(nullString), empty);
     }
 
+    @Test
+    public void testRemove() {
+        String compareString = "TestString";
+        String testString = "Test(String";
+        String removeString = "(";
+        assertEquals(StringUtils.remove(testString, removeString), compareString);
+    }
+
+    @Test
+    public void testNegativeRemove() {
+        String compareString = "Test(String";
+        String testString = "Test(String";
+        String removeString = ")";
+        assertEquals(StringUtils.remove(testString, removeString), compareString);
+    }
 }

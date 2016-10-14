@@ -70,8 +70,8 @@ def setupLoggers() {
     logger 'org.springframework.ws.server.MessageTracing.received', getSoapTracingLevel(), ['console'], false
 
     // Application loggers
-    logger 'prv.mark.test', appLogLevel, ['console'], false
-    logger 'prv.mark.test.MarkSpringBootApplication', statusLogLevel, ['log_file','monitor_status','console'], false
+    logger 'prv.mark.test.processtextfile', appLogLevel, ['console'], false
+    logger 'prv.mark.test.processtextfile.ProcessTextFileApplication', statusLogLevel, ['log_file','monitor_status','console'], false
 
     root Level.ERROR, ['console']
 }

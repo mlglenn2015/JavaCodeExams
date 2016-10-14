@@ -1,0 +1,45 @@
+[
+    {
+        "name": "John Doe",
+        "age=": 20,
+        "city=": "Safford",
+        "state=": "AZ",
+        "isfemale=": "N",
+        "isemployee=": "Y",
+        "iscitizen=": "Y" 
+    },
+    {
+        "name": "Jane Doe",
+        "age=": 21,
+        "city=": "Safford",
+        "state=": "AZ",
+        "isfemale=": "Y",
+        "isemployee=": "N",
+        "iscitizen=": "Y" 
+    },
+    {
+        "name": "Ronald McDonald",
+        "age=": 99,
+        "city=": "New York",
+        "state=": "NY",
+        "isfemale=": "N",
+        "isemployee=": "N",
+        "iscitizen=": "Y" 
+    },
+    {
+        "name": "Sergio Valente",
+        "age=": 66,
+        "city=": "Paris",
+        "isfemale=": "N",
+        "isemployee=": "N",
+        "iscitizen=": "N" 
+    },
+    {
+        "name": "Last Person",
+        "age=": 55,
+        "city=": "Moscow",
+        "isfemale=": "Y",
+        "isemployee=": "Y",
+        "iscitizen=": "N" 
+    }
+]

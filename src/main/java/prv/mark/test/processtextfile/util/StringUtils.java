@@ -16,9 +16,16 @@ public final class StringUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(StringUtils.class);
     public static final String EMPTY = "";
     public static final String BLANK = " ";
+    //public static final String TAB = "    ";
     public static final String COMMA = ",";
-    public static final String LEFT_PAREN = "(";
+    //public static final String ESC_LEFT_PAREN = "\\(";
+    public static final String ESC_RIGHT_PAREN = "\\)";
+    //public static final String LEFT_PAREN = "(";
     public static final String RIGHT_PAREN = ")";
+    public static final String LEFT_BLOCK = "[";
+    public static final String RIGHT_BLOCK = "]";
+    //public static final String LEFT_CURLY = "{";
+    //public static final String RIGHT_CURLY = "}";
 
 
     /**
@@ -40,13 +47,14 @@ public final class StringUtils {
         if (isEmpty(inStr) || isEmpty(delim)) {
             return EMPTY;
         }
+        String returnStr = EMPTY;
 
         try {
-            return inStr.split(delim)[0];
+            returnStr = inStr.split(delim)[0];
         } catch (Exception e) {
             LOGGER.debug("StringUtils.getFirstTokenFromString(): Exception caught {}", e);
-            return EMPTY;
         }
+        return returnStr;
     }
 
     /**
@@ -72,7 +80,7 @@ public final class StringUtils {
                 LOGGER.debug("TOKEN: {}", token);
             }
 
-            returnStr = tokenArray.get(tokenNumber - 1); //returning the token
+            returnStr = tokenArray.get(tokenNumber - 1); //returning the token from ArrayList<String>
 
         } catch (Exception e) {
             LOGGER.debug("StringUtils.getTokenNumberFromString(): Exception caught {}", e);
@@ -97,7 +105,6 @@ public final class StringUtils {
         StringTokenizer st = new StringTokenizer(inStr, delim);
         if (st.hasMoreTokens()) {
             LOGGER.debug("StringUtils.getLastTokenFromString(): # TOKENS: {}", st.countTokens());
-            //LOGGER.debug("StringUtils.getLastTokenFromString(): nextToken {}", st.nextToken());
 
             try {
                 returnStr = inStr.split(delim)[st.countTokens()-1];
@@ -137,5 +144,15 @@ public final class StringUtils {
         return Optional.ofNullable(str).orElse(EMPTY);
     }
 
+    /**
+     * Removes a substring from a string.
+     *
+     * @param stringToKeep The string that contains the stringToRemove
+     * @param stringToRemove The string to be removed from stringToKeep
+     * @return {@link String} stringToKeep
+     */
+    public static String remove(String stringToKeep, String stringToRemove) {
+        return org.apache.commons.lang3.StringUtils.remove(stringToKeep, stringToRemove);
+    }
 
 }
