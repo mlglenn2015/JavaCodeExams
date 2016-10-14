@@ -1,7 +1,7 @@
 (name)John Doe
 (age)20
 (city)Safford, AZ
-(flags)NYY        (is female)(is employee)(is citizen)
+(flags)NYY
 
 (name)Jane Doe
 (age)21
