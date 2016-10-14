@@ -64,7 +64,7 @@ public final class StringUtils {
      * @return
      */
     public static String getTokenNumberFromString(final String inStr, final String delim, final int tokenNumber) {
-        if (isEmpty(inStr) || isEmpty(delim)) {
+        if (isEmpty(inStr) || isEmpty(delim) || (tokenNumber == 0)) {
             return EMPTY;
         }
         String returnStr = EMPTY;
@@ -124,7 +124,7 @@ public final class StringUtils {
      * @return
      */
     public static List<String> returnTokensAsArrayOfString(final String input, final String delim) {
-        if (isEmpty(input)) {
+        if (isEmpty(input) || isEmpty(delim)) {
             return new ArrayList<>();
         }
         List<String> returnList = new ArrayList<>();

@@ -1,0 +1,9 @@
+(name)Test Person 1
+(age)25
+(city)London
+(flags)NNN
+
+(name)Test Person 2
+(age)20
+(city)Memphis, TN
+(flags)YNN

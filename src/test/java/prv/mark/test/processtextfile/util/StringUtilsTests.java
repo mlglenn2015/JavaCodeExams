@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  * JUnit tests for the {@link StringUtils} class.
@@ -55,6 +55,14 @@ public class StringUtilsTests {
     }
 
     @Test
+    public void testGetZeroTokenFromString() {
+        String testStr = "My-Test-String";
+        String testToken = "";
+        String returnStr = StringUtils.getTokenNumberFromString(testStr, "-", 0);
+        assertEquals(returnStr, testToken);
+    }
+
+    @Test
     public void testGetSecondTokenFromString() {
         String testStr = "My(Test(String";
         String testToken = "Test";
@@ -79,6 +87,14 @@ public class StringUtilsTests {
     }
 
     @Test
+    public void testGetFifthTokenFromStringEmpty() {
+        String testStr = "My Test String";
+        String testToken = "";
+        String returnStr = StringUtils.getTokenNumberFromString(testStr, "", 5);
+        assertEquals(returnStr, testToken);
+    }
+
+    @Test
     public void testGetLastTokenFromString() {
         String testStr = "My Test String";
         String testToken = "String";
@@ -95,12 +111,25 @@ public class StringUtilsTests {
     }
 
     @Test
+    public void testGetLastTokenFromStringEmptyToken() {
+        String testStr = "My Test String";
+        String testToken = "";
+        String returnStr = StringUtils.getLastTokenFromString(testStr, "");
+        assertEquals(returnStr, testToken);
+    }
+
+    @Test
     public void testReturnTokensAsArray() {
         String testStr = "My Test String Has Six Tokens";
-        String testToken = "More";
         List<String> tokenArray = StringUtils.returnTokensAsArrayOfString(testStr, " ");
         assertNotNull(tokenArray);
         assertTrue(tokenArray.size() > 0);
+    }
+
+    @Test
+    public void testReturnTokensAsArrayNull() {
+        List<String> tokenArray = StringUtils.returnTokensAsArrayOfString(null, " ");
+        assertTrue(tokenArray.size() == 0);
     }
 
     @Test

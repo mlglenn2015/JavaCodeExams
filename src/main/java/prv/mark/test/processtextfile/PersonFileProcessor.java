@@ -36,7 +36,12 @@ public class PersonFileProcessor extends AbstractFileProcessor {
         LOGGER.debug("FileProcessor.processFile()");
 
         // Step 1: Open the input file and load to a List
-        File infile = getFile(getInputFileName());
+        File infile = null;
+        try {
+            infile = getFile(getInputFileName());
+        } catch (Exception e) {
+            LOGGER.debug("!!! FileProcessor.processFile(): Unexpected Exception caught: {}", e);
+        }
 
         if (infile != null) {
 
@@ -80,7 +85,6 @@ public class PersonFileProcessor extends AbstractFileProcessor {
                 LOGGER.debug("!!! FileProcessor.processFile(): IOException caught: {}", ioe);
             }
 
-
         } else {
             LOGGER.debug("!!! FileProcessor.processFile(): Unable to access file {}", getInputFileName());
         }
@@ -121,7 +125,9 @@ public class PersonFileProcessor extends AbstractFileProcessor {
 
         } catch (IOException ioe) {
             LOGGER.debug("!!! FileProcessor.processFile(): IOException caught: {}", ioe);
-        } finally {
+        } catch (Exception e) {
+            LOGGER.debug("!!! FileProcessor.processFile(): Unexpected Exception caught: {}", e);
+        }finally {
             try {
                 // Close the writer regardless of what happens...
                 if (bufferedWriter != null) {
