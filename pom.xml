@@ -221,10 +221,14 @@
             <artifactId>spring-integration-jmx</artifactId>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.junit</groupId>
             <artifactId>com.springsource.org.junit</artifactId>
             <version>4.7.0</version>
+        </dependency>-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
         <!-- HSQLDB for local development and test -->
         <dependency>
@@ -251,12 +255,12 @@
             <version>3.1</version>
         </dependency>
         <!-- Oracle Driver -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
             <version>11.2.0.4</version>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa</artifactId>
